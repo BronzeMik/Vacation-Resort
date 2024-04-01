@@ -1,0 +1,357 @@
+
+body {
+    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+/*#ffd462 #000000*/
+
+/*Navigation*/
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    max-width: 20%;
+    display: flex;
+}
+
+.nav-logo {
+    max-height: 100px;
+}
+
+.menu {
+    width: 60%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.menu ul li {
+    padding: 0px 15px;
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.nav-link:hover {
+    color: #ffd462;
+}
+
+/*Hero*/
+
+@keyframes slideInTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slideInTop {
+    animation: slideInTop ease-in .7s;
+}
+
+.slideInBottom {
+    animation: slideInBottom ease-in .7s;
+}
+
+.slideInBottomTwo {
+    animation: slideInBottom ease-in .7s;
+    animation-delay: .5s;
+}
+
+.slideInBottomThree {
+    animation: slideInBottom ease-in .7s;
+    animation-delay: 1s;
+}
+
+.fadeIn {
+    animation: fadeIn ease .7s
+}
+
+.grow {
+    animation: grow ease .8s
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 70px;
+}
+
+.hero-heading h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    padding: 50px 0 0;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+.hero-heading p {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    letter-spacing: .1em;
+    text-align: center;
+    margin-top: -35px;
+    font-weight: 300;
+}
+
+.hero-container {
+    background-image: url('../styles/images/hero-img.jpg');
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, .8);
+    width: 75%;
+    height: 25em;
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 60%;
+    text-align: center;
+}
+
+.offer {
+    color: #ffd462;
+    font-size: 4em;
+    line-height: 65px;
+    text-transform: uppercase;
+    margin-bottom: -10px;
+}
+
+.hero-p {
+    color: #fff;
+    text-align: justify;
+}
+
+.hero-content button {
+    padding: 20px 90px;
+    color: #000000;
+    background-color: #ffd462;
+    border: 1px solid #ffd462;
+    border-radius: 5px;
+}
+
+.hero-content button:hover {
+    color: #ffd462;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+hr {
+    border: 1px rgba(0, 0, 0, .3) dotted;
+}
+
+@media (max-width: 980px) {
+    .offer {
+        font-size: 2.5em;
+        line-height: 1.2em;
+    }
+    .hero-content {
+        width: 90%;
+    }
+}
+
+/*Attractions*/
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.experience-container h2  {
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+.attractions {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.attract {
+    width: 30%;
+    min-width: 300px;
+    text-align: justify;
+    padding: 0 6px;
+}
+
+.attraction-img {
+   height: 15em;
+   display: none;
+   
+}
+
+.attraction-img1 {
+    height: 15em;
+    background-image: url('../styles/images/island-tour.jpg');
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    font-weight: bold;
+ }
+
+.attraction-img2 {
+    height: 15em;
+    background-image: url('../styles/images/tahiti-snorkeling.jpg');
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    font-weight: bold;
+ }
+
+ .attraction-img3 {
+    height: 15em;
+    background-image: url('../styles/images/tahiti-street-food.jpeg');
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    font-weight: bold;
+ }
+
+.attraction-cta {
+    color: #000;
+    text-transform: uppercase;
+}
+
+.attraction-cta:hover {
+    color: #ffc21b
+}
+
+@media (max-width: 980px) {
+    .attractions {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 780px) {
+    .attractions {
+        grid-template-columns: 1fr;
+    }
+
+    .menu ul {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu ul li {
+        padding: 10px 0px 0px 0px;
+    }
+
+    .hero-container {
+        height: auto;
+    }
+
+    .experience-container h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 300px) {
+    .offer {
+        font-size: 1.6em;
+    }
+
+    .hero-p {
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
+/*footer*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #000;
+}
+
+.footer {
+    color: #ffc21b;
+    padding: 10px 0px;
+    text-align: center;
+    letter-spacing: .3em;
+    word-spacing: .2em;
+}
